@@ -1,0 +1,1048 @@
+{
+  "version": "2021.12.16",
+  "settings": {
+    "project": {
+      "title": "Проект для регрессионного тестирования основного функционала"
+    },
+    "AllowEditTableView": true
+  },
+  "securityPolicies": {
+    "appGroup": {
+      "name": "TestApp"
+    },
+    "auth": [
+      {
+        "type": "certificates"
+      },
+      {
+        "type": "allowRegister",
+        "DefaultGroup": "UsersGroup"
+      }
+    ],
+    "users": [
+      {
+        "recid": "143b91f2-5637-49ca-b205-babb32ae804f",
+        "name": "Administrator",
+        "description": "Администратор",
+        "login": "admin",
+        "password": "admin",
+        "email": "admin@mfc.ru",
+        "parentGroups": [
+          "AdministratorsGroup"
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "name": "AdministratorsGroup",
+        "description": "Администраторы",
+        "parentGroup": "TestApp",
+        "roles": [
+          "AdministratorsRole"
+        ]
+      }
+    ],
+    "roles": [
+      {
+        "name": "AdministratorsRole",
+        "privileges": [
+          "AdministratorsPrivileges"
+        ]
+      }
+    ],
+    "privileges": [
+      {
+        "name": "AdministratorsPrivileges",
+        "label": "Привилегии группы Администраторы",
+        "description": "Привилегии группы Администраторы",
+        "isEnabled": true,
+        "permissions": [
+          {
+            "objectName": "findbyrecid_method_test_table",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "rdev___auth_groups",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "rdev___auth_groupuser",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "rdev___auth_object_access",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "rdev___updateusers",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "rdev___updatereceivers",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "rdev___updateservers",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "rdev___updateprocesslog",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "rdev___sync_nodes",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "rdev___sync_nodes_receiver",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "rdev___auth_users",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "rdev___syscertificates",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "types_table",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "relation_table",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "mainMenu",
+            "objectType": "menuItem",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "rdev___updateprojects",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "rdev___envvariables",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "rdev___auth_users",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "rdev___history",
+            "objectType": "table",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          },
+          {
+            "objectName": "methodFindByRecIdContextMenu",
+            "objectType": "menuItem",
+            "accessLevels": [
+              "read",
+              "write",
+              "create",
+              "delete"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "menus": [
+    {
+      "name": "mainMenu",
+      "title": "Главное меню",
+      "hint": "Главное меню",
+      "typeMenuItem": "Submenu",
+      "submenuItems": [
+        {
+          "name": "typesMenuItem",
+          "title": "Основные типы данных",
+          "typeMenuItem": "Table",
+          "object": "types_table"
+        },
+        {
+          "name": "relationMenuItem",
+          "title": "Все ссылающиеся типы",
+          "typeMenuItem": "Table",
+          "object": "relation_table"
+        },
+        {
+          "name": "FindByRecIdMenu",
+          "title": "FindByRecId",
+          "typeMenuItem": "Table",
+          "object": "findbyrecid_method_test_table"
+        }
+      ]
+    },
+    {
+      "name": "methodFindByRecIdContextMenu",
+      "title": "Контекстное меню",
+      "hint": "Контекстное меню",
+      "typeMenuItem": "Submenu",
+      "submenuItems": [
+        {
+          "name": "testFindByRecIdSuccessMethodItem",
+          "title": "Тестовый метод FindByRecId (Успех)",
+          "typeMenuItem": "Method",
+          "object": "test_findbyrecid_success"
+        },
+        {
+          "name": "testFindByRecIdNonexistentRecidMethodItem",
+          "title": "Тест функции FindByRecId (Ошибка: Не существующий recid)",
+          "typeMenuItem": "Method",
+          "object": "test_findbyrecid_error_nonexistent_recid"
+        },
+        {
+          "name": "testFindByRecIdNullRecidMethodItem",
+          "title": "Тест функции FindByRecId (Ошибка: Параметр recid установлен в NULL)",
+          "typeMenuItem": "Method",
+          "object": "test_findbyrecid_error_null_recid"
+        }
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "sysenum_type",
+      "type": "SysENUM",
+      "displayName": "Поле SysEnum",
+      "enum": [
+        {
+          "id": 2,
+          "value": "AB"
+        },
+        {
+          "id": 1,
+          "value": "ab"
+        },
+        {
+          "id": 3,
+          "value": "YZ"
+        },
+        {
+          "id": 4,
+          "value": "yz"
+        },
+        {
+          "id": 5,
+          "value": "АБ"
+        },
+        {
+          "id": 6,
+          "value": "ЮЯ"
+        },
+        {
+          "id": 7,
+          "value": "аб"
+        },
+        {
+          "id": 8,
+          "value": "юя"
+        },
+        {
+          "id": 9,
+          "value": "1"
+        },
+        {
+          "id": 10,
+          "value": "10"
+        },
+        {
+          "id": 11,
+          "value": "100"
+        },
+        {
+          "id": 12,
+          "value": "0987654321"
+        },
+        {
+          "id": 13,
+          "value": "!@#$%*()_{}[];:',.<>/?!№;%:?*()_+=-"
+        }
+      ]
+    },
+    {
+      "name": "guidRelation",
+      "type": "SysRelation",
+      "displayName": "Тип SysGUID",
+      "isHighloaded": true,
+      "relation": {
+        "table": "types_table",
+        "defaultNulledValueLabel": "Поле принимает значение null",
+        "viewDefaultLabelForGroups": [
+          "AdministratorsGroup"
+        ],
+        "displayField": "sysguid_test",
+        "isLink": true
+      }
+    },
+    {
+      "name": "stringRelation",
+      "type": "SysRelation",
+      "displayName": "Тип String",
+      "isHighloaded": true,
+      "relation": {
+        "table": "types_table",
+        "displayField": "sysstring_test",
+        "isLink": true,
+        "defaultNulledValueLabel": "Поле принимает значение null",
+        "viewDefaultLabelForGroups": [
+          "AdministratorsGroup"
+        ]
+      }
+    },
+    {
+      "name": "booleanRelation",
+      "type": "SysRelation",
+      "displayName": "Тип Boolean",
+      "isHighloaded": true,
+      "relation": {
+        "table": "types_table",
+        "displayField": "sysboolean_test",
+        "isLink": true,
+        "defaultNulledValueLabel": "Поле принимает значение null",
+        "viewDefaultLabelForGroups": [
+          "AdministratorsGroup"
+        ]
+      }
+    },
+    {
+      "name": "timedateRelation",
+      "type": "SysRelation",
+      "displayName": "Тип TimeDate",
+      "isHighloaded": true,
+      "relation": {
+        "table": "types_table",
+        "displayField": "systimedate_test",
+        "isLink": true,
+        "defaultNulledValueLabel": "Поле принимает значение null",
+        "viewDefaultLabelForGroups": [
+          "AdministratorsGroup"
+        ]
+      }
+    },
+    {
+      "name": "dateRelation",
+      "type": "SysRelation",
+      "displayName": "Тип Date",
+      "isHighloaded": true,
+      "relation": {
+        "table": "types_table",
+        "displayField": "sysdate_test",
+        "isLink": true,
+        "defaultNulledValueLabel": "Поле принимает значение null",
+        "viewDefaultLabelForGroups": [
+          "AdministratorsGroup"
+        ]
+      }
+    },
+    {
+      "name": "timeRelation",
+      "type": "SysRelation",
+      "displayName": "Тип Time",
+      "isHighloaded": true,
+      "relation": {
+        "table": "types_table",
+        "displayField": "systime_test",
+        "isLink": true,
+        "defaultNulledValueLabel": "Поле принимает значение null",
+        "viewDefaultLabelForGroups": [
+          "AdministratorsGroup"
+        ]
+      }
+    },
+    {
+      "name": "numberRelation",
+      "type": "SysRelation",
+      "displayName": "Тип Number",
+      "isHighloaded": true,
+      "relation": {
+        "table": "types_table",
+        "displayField": "sysnumber_test",
+        "isLink": true,
+        "defaultNulledValueLabel": "Поле принимает значение null",
+        "viewDefaultLabelForGroups": [
+          "AdministratorsGroup"
+        ]
+      }
+    },
+    {
+      "name": "intRelation",
+      "type": "SysRelation",
+      "displayName": "Тип Int",
+      "isHighloaded": true,
+      "relation": {
+        "table": "types_table",
+        "displayField": "sysint_test",
+        "isLink": true,
+        "defaultNulledValueLabel": "Поле принимает значение null",
+        "viewDefaultLabelForGroups": [
+          "AdministratorsGroup"
+        ]
+      }
+    },
+    {
+      "name": "moneyRelation",
+      "type": "SysRelation",
+      "displayName": "Тип Money",
+      "isHighloaded": true,
+      "relation": {
+        "table": "types_table",
+        "displayField": "sysmoney_test",
+        "isLink": true,
+        "defaultNulledValueLabel": "Поле принимает значение null",
+        "viewDefaultLabelForGroups": [
+          "AdministratorsGroup"
+        ]
+      }
+    },
+    {
+      "name": "decimalRelation",
+      "type": "SysRelation",
+      "displayName": "Тип Decimal",
+      "isHighloaded": true,
+      "relation": {
+        "table": "types_table",
+        "displayField": "sysdecimal_test",
+        "isLink": true,
+        "defaultNulledValueLabel": "Поле принимает значение null",
+        "viewDefaultLabelForGroups": [
+          "AdministratorsGroup"
+        ]
+      }
+    },
+    {
+      "name": "ENUMRelation",
+      "type": "SysRelation",
+      "displayName": "Тип ENUM",
+      "isHighloaded": true,
+      "relation": {
+        "table": "types_table",
+        "displayField": "sysenum_test",
+        "isLink": true,
+        "defaultNulledValueLabel": "Поле принимает значение null",
+        "viewDefaultLabelForGroups": [
+          "AdministratorsGroup"
+        ]
+      }
+    },
+    {
+      "name": "relationRelation",
+      "type": "SysRelation",
+      "displayName": "Тип Relation",
+      "relation": {
+        "table": "types_table",
+        "displayField": "edit_table_test",
+        "isLink": true,
+        "defaultNulledValueLabel": "Поле принимает значение null",
+        "viewDefaultLabelForGroups": [
+          "AdministratorsGroup"
+        ]
+      }
+    },
+    {
+      "name": "sysguid_type",
+      "type": "SysGUID",
+      "defaultDb": "4b3de95b-d8b0-469d-b56d-df89f314bcfe"
+    },
+    {
+      "name": "sysguid_type_new",
+      "type": "SysGUID",
+      "defaultDb": "new"
+    },
+    {
+      "name": "sysstring_type",
+      "type": "SysString",
+      "defaultDb": "Строковое значение 1!"
+    },
+    {
+      "name": "sysblob_type",
+      "type": "SysBlob",
+      "defaultDb": "c2RhIGFmZCBkYWhnIGprYWRnc2dnZ2dnZ2dnZ2dzZGEgYWZkIGRhaGcgamthZGdzZ2dnZ2dnZ2dnZ3NkYSBhZmQgZGFoZyBqa2FkZ3NnZ2dnZ2dnZ2dnc2RhIGFmZCBkYWhnIGprYWRnc2dnZ2dnZ2dnZ2dzZGEgYWZkIGRhaGcgamthZGdzZ2dnZ2dnZ2dnZ3NkYSBhZmQgZGFoZyBqa2FkZ3NnZ2dnZ2dnZ2dnc2RhIGFmZCBkYWhnIGprYWRnc2dnZ2dnZ2dnZ2dzZGEgYWZkIGRhaGcgamthZGdzZ2dnZ2dnZ2dnZ3NkYSBhZmQgZGFoZyBqa2FkZ3NnZ2dnZ2dnZ2dnc2RhIGFmZCBkYWhnIGprYWRnc2dnZ2dnZ2dnZ2dzZGEgYWZkIGRhaGcgamthZGdzZ2dnZ2dnZ2dnZ3NkYSBhZmQgZGFoZyBqa2FkZ3NnZ2dnZ2dnZ2dnc2RhIGFmZCBkYWhnIGprYWRnc2dnZ2dnZ2dnZ2dzZGEgYWZkIGRhaGcgamthZGdzZ2dnZ2dnZ2dnZ3NkYSBhZmQgZGFoZyBqa2FkZ3NnZ2dnZ2dnZ2dnc2RhIGFmZCBkYWhnIGprYWRnc2dnZ2dnZ2dnZ2dzZGEgYWZkIGRhaGcgamthZGdzZ2dnZ2dnZ2dnZw=="
+    },
+    {
+      "name": "sysboolean_type",
+      "type": "SysBoolean",
+      "defaultDb": "true"
+    },
+    {
+      "name": "systimedate_type",
+      "type": "SysTimeDate",
+      "defaultDb": "2021-07-01T11:55:00Z"
+    },
+    {
+      "name": "systimedate_type_new",
+      "type": "SysTimeDate",
+      "defaultDb": "new"
+    },
+    {
+      "name": "sysdate_type",
+      "type": "SysDate",
+      "defaultDb": "2021-07-01T00:00:00Z"
+    },
+    {
+      "name": "sysdate_type_new",
+      "type": "SysDate",
+      "defaultDb": "new"
+    },
+    {
+      "name": "systime_type",
+      "type": "SysTime",
+      "defaultDb": "2021-10-27 01:30:00"
+    },
+    {
+      "name": "systime_type_new",
+      "type": "SysTime",
+      "defaultDb": "new"
+    },
+    {
+      "name": "sysnumber_type",
+      "type": "SysNumber",
+      "defaultDb": "0"
+    },
+    {
+      "name": "sysint_type",
+      "type": "SysInt",
+      "defaultDb": "0"
+    },
+    {
+      "name": "sysmoney_type",
+      "type": "SysMoney",
+      "defaultDb": "0"
+    },
+    {
+      "name": "sysdecimal_type",
+      "type": "SysDecimal",
+      "defaultDb": "0"
+    },
+    {
+      "name": "sysenum_type2",
+      "type": "SysENUM",
+      "displayName": "Поле SysEnum",
+      "enum": [
+        {
+          "id": 1,
+          "value": "AB"
+        },
+        {
+          "id": 2,
+          "value": "ab"
+        }
+      ],
+      "defaultDb": "1"
+    },
+    {
+      "name": "sysfile_type",
+      "type": "SysFile",
+      "displayName": "Поле SysFile"
+    },
+    {
+      "name": "sysimage_type",
+      "type": "SysImage"
+    }
+  ],
+  "tables": [
+    {
+      "name": "types_table",
+      "displayName": "Основные типы данных",
+      "description": "Все основные типы данных. На эту таблицу ссылается таблица 'Ссылающиеся типы данных'",
+      "CustomizerViewFields": {
+        "AllowEdit": true
+      },
+      "fields": [
+        {
+          "name": "sysguid_test",
+          "type": "SysGUID",
+          "displayName": "SysGuid",
+          "isImportKey": true
+        },
+        {
+          "name": "sysstring_test",
+          "type": "SysString",
+          "displayName": "SysString",
+          "isImportKey": true
+        },
+        {
+          "name": "sysboolean_test",
+          "type": "SysBoolean",
+          "displayName": "SysBoolean",
+          "isImportKey": true
+        },
+        {
+          "name": "systimedate_test",
+          "type": "SysTimeDate",
+          "displayName": "SysTimeDate",
+          "isImportKey": true
+        },
+        {
+          "name": "sysdate_test",
+          "type": "SysDate",
+          "displayName": "SysDate",
+          "isImportKey": true
+        },
+        {
+          "name": "systime_test",
+          "type": "SysTime",
+          "displayName": "SysTime",
+          "isImportKey": true
+        },
+        {
+          "name": "sysnumber_test",
+          "type": "SysNumber",
+          "displayName": "SysNumber",
+          "hasExtendedFilter": true,
+          "isImportKey": true
+        },
+        {
+          "name": "sysint_test",
+          "type": "SysInt",
+          "displayName": "SysInt",
+          "hasExtendedFilter": true,
+          "isImportKey": true
+        },
+        {
+          "name": "sysmoney_test",
+          "type": "SysMoney",
+          "displayName": "SysMoney",
+          "isImportKey": true
+        },
+        {
+          "name": "sysdecimal_test",
+          "type": "SysDecimal",
+          "displayName": "SysDecimal",
+          "isImportKey": true
+        },
+        {
+          "name": "sysenum_test",
+          "type": "sysenum_type",
+          "displayName": "SysEnum",
+          "isImportKey": true
+        },
+        {
+          "name": "sysimage_test",
+          "type": "SysImage",
+          "displayName": "SysFile",
+          "imageField": "sysfile_test",
+          "isImportKey": true
+        },
+        {
+          "name": "sysfile_test",
+          "type": "SysFile",
+          "displayName": "SysFile",
+          "isImportKey": true,
+          "hasSortingIndex": true
+        }
+      ],
+      "advancedSearch": {
+        "visible": true,
+        "searchFields": [
+          {
+            "name": "sysguid_test",
+            "tooltip": "Guid",
+            "label": "Guid"
+          },
+          {
+            "name": "sysstring_test",
+            "tooltip": "Строковое поле",
+            "label": "Строковое поле"
+          },
+          {
+            "name": "reccode",
+            "tooltip": "код",
+            "label": "Системное поле reccode с очень длинным названием для проверки отображения длинных названий в поисковом поле расширенного поиска"
+          },
+          {
+            "name": "recupdatedby",
+            "tooltip": "гуид",
+            "label": "Кем обновлено"
+          },
+          {
+            "name": "recupdated",
+            "tooltip": "дата",
+            "label": "Дата обновления записи"
+          },
+          {
+            "name": "sysboolean_test",
+            "tooltip": "Поле логического типа Поле логического типа Поле логического типа Поле логического типа Поле логического типа Поле логического типа"
+          },
+          {
+            "name": "systimedate_test",
+            "label": "Дата-Время Дата-Время Дата-Время Дата-Время"
+          },
+          {
+            "name": "sysdate_test"
+          },
+          {
+            "name": "systime_test"
+          },
+          {
+            "name": "sysnumber_test"
+          },
+          {
+            "name": "sysint_test"
+          },
+          {
+            "name": "sysmoney_test"
+          },
+          {
+            "name": "sysdecimal_test"
+          },
+          {
+            "name": "sysenum_test"
+          },
+          {
+            "name": "sysfile_test"
+          }
+        ]
+      },
+      "fieldGroups": {
+        "autoLookup": {
+          "displayName": "",
+          "fields": [
+            "sysstring_test",
+            "sysint_test"
+          ]
+        },
+        "autoRelation": {
+          "displayName": "Тест autoRelation",
+          "fields": [
+            "sysstring_test",
+            "sysdecimal_relation"
+          ]
+        }
+      }
+    },
+    {
+      "name": "relation_table",
+      "displayName": "Ссылающиеся типы данных",
+      "description": "В данной таблице описаны поля, ссылаюшиеся на поля разного типа из таблицы Основыне типы данных",
+      "fields": [
+        {
+          "name": "sysstring_test",
+          "type": "SysString",
+          "displayName": "Поле без связей"
+        },
+        {
+          "name": "sysenum_test_1",
+          "type": "sysenum_type",
+          "displayName": "SysEnum default 0",
+          "defaultEnum": 0,
+          "isImportKey": true
+        },
+        {
+          "name": "sysenum_test_2",
+          "type": "sysenum_type",
+          "displayName": "SysEnum",
+          "isImportKey": true
+        },
+        {
+          "name": "sysenum_test_3",
+          "type": "sysenum_type",
+          "displayName": "SysEnum default 1",
+          "defaultEnum": 9,
+          "isImportKey": true
+        },
+        {
+          "name": "sysguid_relation",
+          "type": "guidRelation",
+          "isImportKey": true,
+          "displayName": "Ссылка на Guid"
+        },
+        {
+          "name": "sysstring_relation",
+          "type": "stringRelation",
+          "isImportKey": true,
+          "displayName": "Ссылка на String"
+        },
+        {
+          "name": "sysboolean_relation",
+          "type": "booleanRelation",
+          "isImportKey": true,
+          "displayName": "Ссылка на Boolean",
+          "isLink": true
+        },
+        {
+          "name": "systimedate_relation",
+          "type": "timedateRelation",
+          "isImportKey": true,
+          "displayName": "Ссылка на TimeDate",
+          "isLink": true
+        },
+        {
+          "name": "sysdate_relation",
+          "type": "dateRelation",
+          "isImportKey": true,
+          "displayName": "Ссылка на Date",
+          "isLink": true
+        },
+        {
+          "name": "systime_relation",
+          "type": "timeRelation",
+          "isImportKey": true,
+          "displayName": "Ссылка на Time",
+          "isLink": true
+        },
+        {
+          "name": "sysnumber_relation",
+          "type": "numberRelation",
+          "isImportKey": true,
+          "displayName": "Ссылка на Number",
+          "isLink": true
+        },
+        {
+          "name": "sysint_relation",
+          "type": "intRelation",
+          "isImportKey": true,
+          "displayName": "Ссылка на Int",
+          "isLink": true
+        },
+        {
+          "name": "sysmoney_relation",
+          "type": "moneyRelation",
+          "isImportKey": true,
+          "displayName": "Ссылка на Money",
+          "isLink": true
+        },
+        {
+          "name": "sysdecimal_relation",
+          "type": "decimalRelation",
+          "isImportKey": true,
+          "displayName": "Ссылка на Decimal",
+          "isLink": true
+        },
+        {
+          "name": "sysenum_relation",
+          "type": "ENUMRelation",
+          "isImportKey": true,
+          "displayName": "Ссылка на ENUM",
+          "isLink": true
+        },
+        {
+          "name": "sysfile",
+          "type": "SysFile",
+          "isImportKey": true,
+          "displayName": "Файл"
+        }
+      ],
+      "fieldGroups": {
+        "autoRelation": {
+          "displayName": "Тест autoRelation",
+          "fields": [
+            "sysstring_test",
+            "sysdecimal_relation"
+          ]
+        }
+      },
+      "advancedSearch": {
+        "visible": true,
+        "searchFields": [
+          {
+            "name": "sysstring_test",
+            "tooltip": "Ссылка на строковое поле",
+            "label": "Ссылка на строковое поле"
+          },
+          {
+            "name": "sysenum_test_1"
+          },
+          {
+            "name": "sysenum_test_2"
+          },
+          {
+            "name": "sysenum_test_3"
+          },
+          {
+            "name": "sysguid_relation"
+          },
+          {
+            "name": "sysstring_relation"
+          },
+          {
+            "name": "sysboolean_relation"
+          },
+          {
+            "name": "systimedate_relation"
+          },
+          {
+            "name": "sysdate_relation"
+          },
+          {
+            "name": "systime_relation"
+          },
+          {
+            "name": "sysnumber_relation"
+          },
+          {
+            "name": "sysint_relation"
+          },
+          {
+            "name": "sysmoney_relation"
+          },
+          {
+            "name": "sysdecimal_relation"
+          },
+          {
+            "name": "sysenum_relation"
+          }
+        ]
+      }
+    },
+    {
+      "name": "findbyrecid_method_test_table",
+      "displayName": "FindByRecId",
+      "description": "Таблица для тестирования метода FindByRecId класса MethodProvider",
+      "fields": [
+        {
+          "name": "testfield",
+          "type": "SysString",
+          "displayName": "Test field"
+        }
+      ],
+      "methods": [
+        {
+          "name": "test_findbyrecid_success",
+          "displayName": "Тест функции FindByRecId (Успех)",
+          "showModalYesNo": "Действие необратимо.",
+          "workflow": [
+            {
+              "name": "formkeyelementpassportfile",
+              "methodSrc": "server"
+            },
+            {
+              "name": "registersignedkeyelementpassport",
+              "methodSrc": "server",
+              "setResultStep": 1
+            }
+          ],
+          "fields": []
+        },
+        {
+          "name": "test_findbyrecid_error_nonexistent_recid",
+          "displayName": "Тест функции FindByRecId (Ошибка: Не существующий recid)",
+          "fields": []
+        },
+        {
+          "name": "test_findbyrecid_error_null_recid",
+          "displayName": "Тест функции FindByRecId (Ошибка: Параметр recid установлен в NULL)",
+          "fields": []
+        }
+      ],
+      "menus": [
+        "methodFindByRecIdContextMenu"
+      ]
+    }
+  ]
+}
